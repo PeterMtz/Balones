@@ -64,7 +64,7 @@ library(tidymodels)
     ## x dplyr::filter()  masks stats::filter()
     ## x dplyr::lag()     masks stats::lag()
     ## x recipes::step()  masks stats::step()
-    ## * Use suppressPackageStartupMessages() to eliminate package startup messages
+    ## * Dig deeper into tidy modeling with R at https://www.tmwr.org
 
 ``` r
 library(readxl)
@@ -189,20 +189,20 @@ fit <- brm(Y ~ Diseño_Del_mundial+
     ## Chain 1: 
     ## Chain 1: 
     ## Chain 1: 
-    ## Chain 1:  Elapsed Time: 18.248 seconds (Warm-up)
-    ## Chain 1:                5.649 seconds (Sampling)
-    ## Chain 1:                23.897 seconds (Total)
+    ## Chain 1:  Elapsed Time: 19.372 seconds (Warm-up)
+    ## Chain 1:                5.852 seconds (Sampling)
+    ## Chain 1:                25.224 seconds (Total)
     ## Chain 1: 
     ## Chain 2: 
-    ## Chain 2: Gradient evaluation took 0 seconds
-    ## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0 seconds.
+    ## Chain 2: Gradient evaluation took 0.001 seconds
+    ## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 10 seconds.
     ## Chain 2: Adjust your expectations accordingly!
     ## Chain 2: 
     ## Chain 2: 
     ## Chain 2: 
-    ## Chain 2:  Elapsed Time: 20.405 seconds (Warm-up)
-    ## Chain 2:                6.33 seconds (Sampling)
-    ## Chain 2:                26.735 seconds (Total)
+    ## Chain 2:  Elapsed Time: 18.124 seconds (Warm-up)
+    ## Chain 2:                6.506 seconds (Sampling)
+    ## Chain 2:                24.63 seconds (Total)
     ## Chain 2: 
     ## Chain 3: 
     ## Chain 3: Gradient evaluation took 0 seconds
@@ -211,9 +211,9 @@ fit <- brm(Y ~ Diseño_Del_mundial+
     ## Chain 3: 
     ## Chain 3: 
     ## Chain 3: 
-    ## Chain 3:  Elapsed Time: 17.723 seconds (Warm-up)
-    ## Chain 3:                6.752 seconds (Sampling)
-    ## Chain 3:                24.475 seconds (Total)
+    ## Chain 3:  Elapsed Time: 17.552 seconds (Warm-up)
+    ## Chain 3:                6.245 seconds (Sampling)
+    ## Chain 3:                23.797 seconds (Total)
     ## Chain 3: 
     ## Chain 4: 
     ## Chain 4: Gradient evaluation took 0 seconds
@@ -222,9 +222,9 @@ fit <- brm(Y ~ Diseño_Del_mundial+
     ## Chain 4: 
     ## Chain 4: 
     ## Chain 4: 
-    ## Chain 4:  Elapsed Time: 17.692 seconds (Warm-up)
-    ## Chain 4:                6.663 seconds (Sampling)
-    ## Chain 4:                24.355 seconds (Total)
+    ## Chain 4:  Elapsed Time: 18.13 seconds (Warm-up)
+    ## Chain 4:                5.919 seconds (Sampling)
+    ## Chain 4:                24.049 seconds (Total)
     ## Chain 4:
 
 ``` r
@@ -240,15 +240,15 @@ summary(fit)
     ## 
     ## Population-Level Effects: 
     ##                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-    ## Intercept               0.80      0.14     0.53     1.07 1.00     2191     2088
-    ## Diseño_Del_mundial     -0.13      0.12    -0.37     0.12 1.00     2164     2512
-    ## Precio                 -0.00      0.00    -0.00    -0.00 1.00     3413     2547
-    ## Marca_Gaser            -1.11      0.11    -1.32    -0.88 1.00     2450     2255
-    ## Diseño_Fondo_blanco    -0.14      0.12    -0.38     0.09 1.00     2014     2105
-    ## Marca_Molten           -0.86      0.11    -1.07    -0.65 1.00     2569     2550
-    ## Marca_Voit             -0.51      0.10    -0.71    -0.30 1.00     2349     2449
-    ## Diseño_Colorido        -0.06      0.12    -0.30     0.17 1.00     2117     2282
-    ## Diseño_Con_temática    -0.10      0.12    -0.34     0.14 1.00     1949     2522
+    ## Intercept               0.79      0.14     0.52     1.07 1.00     2044     2690
+    ## Diseño_Del_mundial     -0.12      0.13    -0.38     0.14 1.00     1917     2432
+    ## Precio                 -0.00      0.00    -0.00    -0.00 1.00     4022     2533
+    ## Marca_Gaser            -1.11      0.11    -1.33    -0.89 1.00     2207     2590
+    ## Diseño_Fondo_blanco    -0.14      0.13    -0.40     0.10 1.00     1712     2397
+    ## Marca_Molten           -0.86      0.11    -1.07    -0.66 1.00     2476     2892
+    ## Marca_Voit             -0.51      0.11    -0.72    -0.31 1.00     2189     2650
+    ## Diseño_Colorido        -0.06      0.13    -0.31     0.19 1.00     1759     2274
+    ## Diseño_Con_temática    -0.10      0.13    -0.35     0.16 1.00     1685     2258
     ## 
     ## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
     ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -283,14 +283,14 @@ loss <- function(price){
     ## use "Brent" or optimize() directly
 
     ## $par
-    ## [1] 500.0002
+    ## [1] 450
     ## 
     ## $value
-    ## [1] -117.0001
+    ## [1] -119.025
     ## 
     ## $counts
     ## function gradient 
-    ##      159       NA 
+    ##      178       NA 
     ## 
     ## $convergence
     ## [1] 10
